@@ -33,8 +33,54 @@ public class Main{
                 for (int x = 0; x < numOfQuestions; x++){
                     addProbs.add(new Addition());
                     addProbs.get(x);
+
+                }
+                System.out.println("Would you like more?");
+                Scanner repeat = new Scanner(System.in);
+                String moreQuestion = repeat.nextLine();
+                if (moreQuestion.equalsIgnoreCase("yes")){
+                    System.out.println("How many questions would you like?");
+                    numOfQuestions = Integer.parseInt(numQuestions);
+                    for (int x = 0; x < numOfQuestions; x++){
+                        addProbs.add(new Addition());
+                        addProbs.get(x);
+                    }
                 }
             }
+            if (function.equalsIgnoreCase("Subtraction")){
+                System.out.println("How many questions would you like?");
+                Scanner mathProblems = new Scanner(System.in);
+                String numQuestions = mathProblems.nextLine();
+                numOfQuestions = Integer.parseInt(numQuestions);
+                mathMains();
+                for (int x = 0; x < numOfQuestions; x++){
+                    subProbs.add(new Subtraction());
+                    subProbs.get(x);
+                }
+            }
+            if (function.equalsIgnoreCase("Multiplication")){
+                System.out.println("How many questions would you like?");
+                Scanner mathProblems = new Scanner(System.in);
+                String numQuestions = mathProblems.nextLine();
+                numOfQuestions = Integer.parseInt(numQuestions);
+                mathMains();
+                for (int x = 0; x < numOfQuestions; x++){
+                    multiProbs.add(new Multiplication());
+                    multiProbs.get(x);
+                }
+            }
+            if (function.equalsIgnoreCase("Division")){
+                System.out.println("How many questions would you like?");
+                Scanner mathProblems = new Scanner(System.in);
+                String numQuestions = mathProblems.nextLine();
+                numOfQuestions = Integer.parseInt(numQuestions);
+                mathMains();
+                for (int x = 0; x < numOfQuestions; x++){
+                    divProbs.add(new Division());
+                    divProbs.get(x);
+                }
+            }
+
 
         }
 
