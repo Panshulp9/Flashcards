@@ -7,9 +7,11 @@ public class Main{
     ArrayList<Multiplication> multiProbs;
     ArrayList<Division> divProbs;
     public int numOfQuestions;
+    //   String[] subjects = {"Math, Science, History, Language"};
+
     public static void main(String[] args) {
         Main flashcards = new Main();
-        String[] subjects = {"Math, Science, History, Language"};
+
     }
     public Main(){
         addProbs = new ArrayList<>();
