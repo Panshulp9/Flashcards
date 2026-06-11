@@ -37,15 +37,19 @@ public class Main{
                     addProbs.get(x);
 
                 }
+                //while(){
                 System.out.println("Would you like more?");
                 Scanner repeat = new Scanner(System.in);
                 String moreQuestion = repeat.nextLine();
                 if (moreQuestion.equalsIgnoreCase("yes")){
                     System.out.println("How many questions would you like?");
-                    numOfQuestions = Integer.parseInt(numQuestions);
-                    for (int x = 0; x < numOfQuestions; x++){
+                    Scanner numofProblems = new Scanner(System.in);
+                    String newQuestion = numofProblems.nextLine();
+                    numOfQuestions = Integer.parseInt(newQuestion);
+                    for (int x = 0; x < numOfQuestions; x++) {
                         addProbs.add(new Addition());
                         addProbs.get(x);
+                //    }
                     }
                 }
             }
